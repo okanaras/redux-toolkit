@@ -2,6 +2,7 @@ import { useState } from 'react'
 import './App.css'
 import { useSelector, useDispatch } from 'react-redux'
 import { decrement, increment } from './redux/counterSlice';
+import UserList from './UserList';
 
 function App() {
   const dispatch = useDispatch();
@@ -10,6 +11,12 @@ function App() {
 
   return (
     <>
+      <div>
+        <UserList />
+      </div>
+
+      <hr />
+
       <div>{value}</div>
       <div>
         <button onClick={() => dispatch(decrement())}>Azalt</button>
